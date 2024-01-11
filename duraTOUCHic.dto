@@ -1,0 +1,18 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+        fragment@0 {
+                target = <&i2c_arm>;
+                __overlay__ {
+                        status = "okay";
+                        #address-cells = <1>;
+                        #size-cells = <0>;
+
+                        duraTOUCH_touchscreen@48 {
+                                compatible = "duraTOUCHic";
+                                reg = < 0x48 >;
+                        };
+                };
+        };
+};
